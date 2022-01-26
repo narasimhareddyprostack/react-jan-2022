@@ -1,19 +1,14 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Navbar from './Navbar/Navbar'
-import Counter from './Counter/Counter'
-import Cart from './Cart/Cart'
-class App extends Component {
+import Message from './Wish/Message'
+import Employee from './Employee/Employee'
+import Hike from './Hike/Hike'
+class App extends React.Component {
     render() {
-        return (
-            <div>
-                <Navbar />
-                <hr />
-                <Cart />
-                <hr />
-                <Counter />
-            </div>
-        )
+        return <>
+            <Navbar />
+            <Employee />
+        </>
     }
 }
-
 export default App
