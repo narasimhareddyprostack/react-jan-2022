@@ -3,7 +3,7 @@ class Navbar extends Component {
     render() {
         return <>
             <nav className="navbar navbar-dark bg-dark">
-                <a href="#">React Event Handling and Binding</a>
+                <a href="#">React Form Handling </a>
             </nav>
         </>
     }

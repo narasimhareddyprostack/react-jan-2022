@@ -1,8 +1,6 @@
 import React from 'react'
 import Navbar from './Navbar/Navbar'
-import Message from './Wish/Message'
-import Employee from './Employee/Employee'
-import Hike from './Hike/Hike'
+//import Registration from './Registration/Registration'
 import Login from './Login/Login'
 class App extends React.Component {
     render() {
