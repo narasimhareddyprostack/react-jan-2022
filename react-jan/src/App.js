@@ -1,18 +1,22 @@
 import React from 'react'
 import Navbar from './Navbar/Navbar'
-import User from './User/User'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import ContactApp from './ContactApp/ContactApp'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouterasRouter } from 'react-router-dom';
 class App extends React.Component {
     render() {
-        return <>
+        return <React.Fragment>
             <Router>
-                <Navbar />
-                <Switch>
 
-                    <Route path="/user" component={User} />
-                </Switch>
+                <Navbar />
+                <Routes>
+                    <Route path="/contact" element={<ContactApp />} />
+                </Routes>
+
+
             </Router>
-        </>
+        </React.Fragment>
     }
+
 }
 export default App
