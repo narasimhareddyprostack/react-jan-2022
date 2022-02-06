@@ -24,7 +24,7 @@ class ContactList extends Component {
                                 <tbody>
                                     {
                                         this.props.contacts.map((contact) => {
-                                            return <tr key={contact.login.uuid} onMouseOver={this.selectedContactHandler.bind(this, contact)}>
+                                            return <tr key={contact.login.uuid} onClick={this.selectedContactHandler.bind(this, contact)}>
                                                 <td>{contact.login.uuid.substring(32, 36)}</td>
                                                 <td>{contact.name.last}</td>
                                                 <td>{contact.email}</td>
