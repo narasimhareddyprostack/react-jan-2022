@@ -5,7 +5,7 @@ class Navbar extends Component {
         return (
             <div>
                 <nav className="navbar navbar-dark bg-dark">
-                    <Link className="navbar-brand" to="contact"> React Hooks  - Use State</Link>
+                    <Link className="navbar-brand" to="contact"> React Contact App</Link>
                     <div>
                         <ul className="navbar-nav">
                             <li className="nav-item">
