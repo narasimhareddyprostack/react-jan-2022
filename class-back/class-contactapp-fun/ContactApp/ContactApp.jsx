@@ -7,11 +7,17 @@ let ContactApp = () => {
     //useEffect(() => { });
     //useEffect(() => { }, [])
     useEffect(() => {
+        console.log("Test Case 123")
         Axios.get('https://gist.githubusercontent.com/narasimhareddyprostack/7e344f346f47bc53a889d78b5258d0c9/raw/56d531cb936d9c79e2417e5d0e5d8c9c876800f2/contactlist')
             .then((response) => {
                 setContacts(response.data)
             })
-            .catch()
+            .catch();
+        return () => {
+            //componentWillUnmount
+            console.log("Final/Death")
+        }
+
     }, [])
     return <>
         <h1>Contact App</h1>
