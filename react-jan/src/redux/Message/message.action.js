@@ -11,5 +11,3 @@ export { gmAction, gnAction, GM, GN }
 
 
 //what is action?
-
-//action is function, return actionable object

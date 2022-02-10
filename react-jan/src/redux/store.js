@@ -1,4 +1,5 @@
-import { createStore } from 'redux'
-import { messaageReducer } from './Message/message.reducer'
-let store = createStore(messaageReducer);
+import { rootReducer } from './rootReducer'
+import { createStore } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
+let store = createStore(rootReducer, composeWithDevTools());
 export { store }
