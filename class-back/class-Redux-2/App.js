@@ -10,8 +10,6 @@ let App = () => {
             {/* <Message /> */}
             <Counter />
         </Provider>
-
-
     </div>
 }
 export default App
