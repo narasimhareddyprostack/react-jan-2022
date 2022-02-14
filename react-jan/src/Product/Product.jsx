@@ -1,34 +1,44 @@
-import React, { Component } from 'react'
-class Product extends Component {
-    constructor(props) {
-        super(props);
-        console.log("First Constructor")
-        this.state = {
-            product_Name: "Iphone 5s"
-        }
+import React, { useState } from 'react'
+let Product = () => {
+    let [product, setProduct] = useState({
+        name: "Iphone 12",
+        price: 45000,
+        qty: 1,
+        image: ""
+    })
+    let decrHandler = () => {
+        setProduct({ ...product, qty: product.qty - 1 })
     }
-    updateNamehandler = () => {
-        this.setState({ product_Name: "Iphone 12s " });
+    let incrHandler = () => {
+        setProduct({ ...product, qty: product.qty + 1 })
     }
-    componentDidMount() {
-        console.log("Third - componentDidMount -after render method")
+    return <React.Fragment>
+        <div className="container">
+            <div className="row">
+                <div className="col-md-8">
+                    <table className="text-white table  bg-dark">
+                        <thead className="text-white">
+                            <th> Product Name</th>
+                            <th> Price</th>
+                            <th>QTY</th>
+                            <th>Total Price</th>
+                        </thead>
+                        <tbody >
+                            <tr>
+                                <td>{product.name}</td>
+                                <td>{product.price}</td>
+                                <td> <i class="fa fa-minus-circle" onClick={decrHandler}></i>
+                                    {product.qty}
+                                    <i class="fa fa-plus-circle" onClick={incrHandler}></i>
+                                </td>
+                                <td>{product.price * product.qty}</td>
+                            </tr>
 
-    }
-    componentDidUpdate() {
-        console.log(".....DidUpdate will execute after DidMount");
-    }
-    componentWillUnmount() {
-        console.log("Finally It will execute");
-    }
-    render() {
-        console.log("Sencond -Render Method");
-        return (
-            <div>
-                <h4>Product Component</h4>
-                <button onClick={this.updateNamehandler}> Change Name</button>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-        )
-    }
+        </div>
+    </React.Fragment>
 }
-
 export default Product
