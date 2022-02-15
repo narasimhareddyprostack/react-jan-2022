@@ -1,15 +1,12 @@
-import React, { Component } from 'react'
-import Product from './Product/Product'
-class App extends Component {
-    render() {
-        return (
-            <div>
-                <h1>App Component</h1>
-                <hr />
-                <Product />
-            </div>
-        )
-    }
+import Registration from './Regi/Registration'
+let App = () => {
+    return <>
+        <nav className="navbar navbar-dark bg-dark">
+            <a href="#">React Form Handling</a>
+        </nav>
+        <div>
+            <Registration />
+        </div>
+    </>
 }
-
 export default App
